@@ -70,6 +70,7 @@ h5
 .works
     .works__grid
         display: flex
+        flex-wrap: wrap
         .works__cell
             padding-left: 0
             padding-right: 0
@@ -77,6 +78,7 @@ h5
             .works__img
                 height: 100%
                 max-height: 230px
+                min-width: 150px
                 width: 100%
                 padding: 1px
             .works__div--hover
@@ -98,12 +100,12 @@ h5
 
 .team
     .team__personimg
-        width: 90%
+        width: 80%
     .team__h5
         padding-top: 0
         color: #ea5655
     .team__p
-        width: 90%
+        width: 80%
         color: $lgray
     .team__socjals
         padding-bottom: 15px
@@ -122,17 +124,16 @@ h5
     display: flex
     flex-wrap: wrap
     .client__image
-        padding-right: 0
-        padding-left: 0
+        width: 50%
+        min-width: 250px
     .client__talk
-        height: 100%
-        padding-right: 0
-        padding-left: 0
-        background-color: #53354A
-        justify-content: center
-        color: $whitecolor
+        width: 50%
+        min-width: 250px
         display: flex
         flex-direction: column
+        justify-content: center
+        background-color: #53354A
+        color: $whitecolor
         .carousel-indicators
             top: 110%
         .client__talkabout
@@ -193,6 +194,9 @@ h5
 
 @media(max-width: 992px)
 
+    section
+        padding: 20px 0
+
     .jumbotron
         .jumbotron__box
             .jumbotron__h1 
@@ -210,8 +214,8 @@ h5
     .client
         .client__talkabout
             max-width: 90%
-            padding-left: 20px
+            padding-left: 15px
             font-size: 16px
         .client__talkh5
-            padding: 0 20px
+            padding: 0 10px
             max-width: 90%
