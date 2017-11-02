@@ -7,6 +7,7 @@ $lgray: #696969
 
 body 
     font-family: 'Lato', sans-serif
+    box-sizing: border-box
 
 section
     padding: 50px 0
@@ -23,13 +24,20 @@ h5
 .row
     margin-right: 0
     margin-left: 0
-
+    
+.navbar-default
+    background-color: transparent 
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15)
+    color: $whitecolor
+    .navbar-toggle
+        margin-top: 20px
+        
 .navbar
     border-bottom: 1px solid $lgray
     height: 76px
     line-height: 76px
     .navbar__item-link
-        color: $whitecolor
+        color: $whitecolor !important
         text-transform: $up
         font-weight: bold
         line-height: 46px
@@ -52,6 +60,10 @@ h5
         .jumbotron__p 
             font-size: 22px
             line-height: 33px
+        .btn
+            transition: 0.7s 
+            &:hover
+                transform: scale(1.2)
 .features
     .features__grid
         display: flex
@@ -119,6 +131,10 @@ h5
                 height: 40px
                 width: 40px
                 line-height: 40px
+                transition: 0.7s
+                &:hover
+                    background-color: $lgray
+                    color: $whitecolor
 
 .clients
     display: flex
@@ -140,6 +156,7 @@ h5
             max-width: 70%
             padding-left: 40px
             font-size: 22px
+            line-height: 100%
             font-family: 'Cormorant Garamond', serif, italic
         .client__talkh5
             font-size: 12px
@@ -154,6 +171,9 @@ h5
         margin-top: 30px
         font-size: 14px
         width: 280px
+        transition: 0.7s
+        &:hover
+            transform: scale(1.2)
 
 .footer 
     min-height: 294px
@@ -179,6 +199,11 @@ h5
                     min-height: 40px
                     width: 40px
                     line-height: 40px
+                    transition: 0.7s
+                    &:hover
+                        background-color: $whitecolor
+                        color: #3A3E64
+                        border: 2px solid #3A3E64
     .footer__copy 
         background-color: #313454
         height: 94px
@@ -211,11 +236,15 @@ h5
         .download__button
             width: 200px
 
-    .client
-        .client__talkabout
-            max-width: 90%
-            padding-left: 15px
-            font-size: 16px
-        .client__talkh5
-            padding: 0 10px
-            max-width: 90%
+    .clients
+        .client__image
+            width: 100%
+        .client__talk
+            width: 100%
+            .client__talkabout
+                max-width: 90%
+                padding: 15px
+                font-size: 18px
+            .client__talkh5
+                padding: 0 15px 15px
+                max-width: 90%
