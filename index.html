@@ -12,35 +12,37 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top container">
-        <div class="navbar-header">
-            <a class="nvbar-brand" href="#">
-                <img src="img/ActiveBox.png">
-            </a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+    <nav class="navbar navbar-default navbar-fixed-top" id="navbarScroll">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="nvbar-brand" href="#">
+                    <img src="img/ActiveBox.png">
+                </a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar">
-            <ul class="navbar-nav nav navbar-right">
-                <li class="navbar__item">
-                    <a class="navbar__item-link" href="#features">features</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__item-link" href="#works">works</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__item-link" href="#team">our team</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__item-link" href="#clients">testimonials</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__item-link" href="#download">download</a>
-                </li>
-            </ul>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav nav navbar-right">
+                    <li class="navbar__item">
+                        <a class="navbar__item-link" href="#features">features</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__item-link" href="#works">works</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__item-link" href="#team">our team</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__item-link" href="#clients">testimonials</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__item-link" href="#download">download</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <header class="jumbotron">
@@ -305,27 +307,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('nav li a').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-                    location.hostname == this.hostname) {
-                    var $target = $(this.hash);
-                    $target = $target.length && $target ||
-                        $('[name=' + this.hash.slice(1) + ']');
-                    if ($target.length) {
-                        var targetOffset = $target.offset().top;
-                        $('html,body')
-                            .animate({
-                                scrollTop: targetOffset
-                            }, 1000);
-                        return false;
-                    }
-                }
-            });
-        });
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
