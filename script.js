@@ -20,26 +20,31 @@ $(document).ready(function() {
 
 //change navbar background color
 
-var scrollNav = document.getElementById('navbar');
-var scrollNavAll = document.getElementById('navbarScroll');
+var scrollNav = $('#navbar');
+var scrollNavAll = $('#navbarScroll');
 
 $(window).ready(function() {
     var scrollY = 0;
-    var windowWidth;
     $(window).scroll(function() {
         scrollY = $(this).scrollTop();
-        windowWidth = $(this).width();
-        if ((scrollY >= 700) && (windowWidth > 750)) {
-            $(scrollNavAll).css('background-color', 'rgba(0, 0, 0, 0.7)');
-            $(scrollNavAll).css('transition', '0.5s');
-            $(scrollNav).css('background-color', 'transparent');
-        } else if ((scrollY >= 700) && (windowWidth <= 750)) {
-            $(scrollNavAll).css('background-color', 'rgba(0, 0, 0, 0.7)');
-            $(scrollNavAll).css('transition', '0.5s');
-            $(scrollNav).css('background-color', 'rgba(0, 0, 0, 0.7)');
+        if (scrollY >= 700) {
+            $(scrollNav).addClass('scroll__nav');
+            $(scrollNavAll).addClass('scroll__navall');
         } else {
-            $(scrollNavAll).css('background-color', 'transparent');
-            $(scrollNav).css('background-color', 'transparent');
-        };
-    });
+            $(scrollNav).removeClass('scroll__nav');
+            $(scrollNavAll).removeClass('scroll__navall');
+        }
+    })
+});
+
+//click menu
+var clickLink = $(".nav li");
+var hideMenu = $(".collapse, .in");
+console.log(clickLink);
+console.log(hideMenu);
+
+$(clickLink).on('click', function() {
+    if (clickLink === click) {
+        $(hideMenu).css('visibility', 'hidden');
+    }
 });
